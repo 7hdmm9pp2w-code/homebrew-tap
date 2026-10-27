@@ -1,9 +1,9 @@
 # Homebrew-Cask für den eigenen Tap 7hdmm9pp2w-code/homebrew-tap (Repo „homebrew-tap“).
-# Installation: brew install --cask 7hdmm9pp2w-code/tap/mediathek-extractor
+# Installation: brew tap 7hdmm9pp2w-code/tap && brew trust 7hdmm9pp2w-code/tap && brew install --cask mediathek-extractor
 # Version und Prüfsumme setzt scripts/update-cask.sh nach jedem Release.
 cask "mediathek-extractor" do
-  version "1.4.0"
-  sha256 "9925d09bd341e7acb13433c4c3818f9d9a428c73b6a03c5611a7851238a4e0a6"
+  version "1.5.0"
+  sha256 "49813e12352681f8cb296e094ba1af775aa46b0a75451f3df7166c8265c425a2"
 
   url "https://github.com/7hdmm9pp2w-code/MediathekExtractor-Releases/releases/download/v#{version}/Mediathek-Extractor-#{version}-macOS.dmg"
   name "Mediathek-Extractor"
