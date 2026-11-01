@@ -2,11 +2,12 @@
 # Installation: brew tap 7hdmm9pp2w-code/tap && brew trust 7hdmm9pp2w-code/tap && brew install --cask mediathek-extractor
 # Version und Prüfsumme setzt scripts/update-cask.sh nach jedem Release.
 cask "mediathek-extractor" do
-  version "1.7.1"
-  sha256 "524537c2e0423fdcf346aaed2a9c4dd05450783fe4301a8d647512be95931663"
+  version "2.0.0"
+  sha256 "6b9e6ec83844ee853240a3ca33431e1e6eb81e8c8c22949b9ef6dfb93bd317e4"
 
-  url "https://github.com/7hdmm9pp2w-code/MediathekExtractor-Releases/releases/download/v#{version}/Mediathek-Extractor-#{version}-macOS.dmg"
-  name "Mediathek-Extractor"
+  url "https://github.com/7hdmm9pp2w-code/MediathekExtractor-Releases/releases/download/v#{version}/Mediathek-Plus-#{version}-macOS.dmg"
+  name "Mediathek Plus"
+  # Früher „Mediathek-Extractor“ – der Cask-Name bleibt, damit „brew upgrade“ weiter greift
   desc "Filme und Serien aus ARD, ZDF, ARTE, 3sat … suchen und herunterladen"
   homepage "https://github.com/7hdmm9pp2w-code/MediathekExtractor-Releases"
 
@@ -17,13 +18,13 @@ cask "mediathek-extractor" do
   depends_on formula: "yt-dlp"
   depends_on :macos
 
-  app "Mediathek-Extractor.app"
+  app "Mediathek Plus.app"
 
   # Ad-hoc-signiert (keine Apple-Developer-ID): Quarantäne entfernen, sonst blockiert macOS den Start
   postflight_steps do
     run "/usr/bin/xattr",
-        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Mediathek-Extractor.app"],
-        writable_paths: ["{{appdir}}/Mediathek-Extractor.app"]
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Mediathek Plus.app"],
+        writable_paths: ["{{appdir}}/Mediathek Plus.app"]
   end
 
   zap trash: [
