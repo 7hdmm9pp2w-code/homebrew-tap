@@ -2,14 +2,14 @@
 # Installation: brew tap 7hdmm9pp2w-code/tap && brew trust 7hdmm9pp2w-code/tap && brew install --cask mediathek-extractor
 # Version und Prüfsumme setzt scripts/update-cask.sh nach jedem Release.
 cask "mediathek-extractor" do
-  version "2.0.2"
-  sha256 "46ad78215dfa8aa9dc318124b0512c8af6d3ee6a7d4dc9bcfb56e7d0771d7111"
+  version "2.1.0"
+  sha256 "6ca6a992ac4011f391d22ccd6d300a1bb7d8f1ffee672c4df7f864d67673e72e"
 
-  url "https://github.com/7hdmm9pp2w-code/MediathekExtractor-Releases/releases/download/v#{version}/Mediathek-Plus-#{version}-macOS.dmg"
+  url "https://github.com/7hdmm9pp2w-code/Mediathek-Plus/releases/download/v#{version}/Mediathek-Plus-#{version}-macOS.dmg"
   name "Mediathek Plus"
   # Früher „Mediathek-Extractor“ – der Cask-Name bleibt, damit „brew upgrade“ weiter greift
   desc "Filme und Serien aus ARD, ZDF, ARTE, 3sat … suchen und herunterladen"
-  homepage "https://github.com/7hdmm9pp2w-code/MediathekExtractor-Releases"
+  homepage "https://github.com/7hdmm9pp2w-code/Mediathek-Plus"
 
   # Die App aktualisiert sich selbst; brew soll ihr dabei nicht in die Quere kommen
   auto_updates true
