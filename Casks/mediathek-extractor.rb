@@ -2,8 +2,8 @@
 # Installation: brew tap 7hdmm9pp2w-code/tap && brew trust 7hdmm9pp2w-code/tap && brew install --cask mediathek-extractor
 # Version und Prüfsumme setzt scripts/update-cask.sh nach jedem Release.
 cask "mediathek-extractor" do
-  version "3.7.1"
-  sha256 "1b350ad5ab121badee93852055d6c2a99cfefbf7397f76ff571354034229ab7c"
+  version "3.7.2"
+  sha256 "f33e695b6c1d1fe817dd307362bc53df5fdf49ca304790ba8f39196e42366a88"
 
   url "https://github.com/7hdmm9pp2w-code/Mediathek-Plus/releases/download/v#{version}/Mediathek-Plus-#{version}-macOS.dmg"
   name "Mediathek Plus"
